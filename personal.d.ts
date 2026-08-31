@@ -40,5 +40,9 @@ export interface RegistroAsistencia {
   tipo: 'entrada' | 'salida';
   fecha_hora: string;
   metodo: string;
+  // Donde estaba el empleado al fichar. Solo viene cuando ficha desde la
+  // app; los registros que crea el backend van sin ubicacion.
+  ubicacion_lat?: number | null;
+  ubicacion_lng?: number | null;
   empleados?: { nombre: string };
 }

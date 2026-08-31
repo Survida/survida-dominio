@@ -4,6 +4,10 @@ export interface PedidoItem {
   cantidad: number;
   precio_unitario: number;
   subtotal: number;
+  // Descuento en PESOS sobre el subtotal de este item, no porcentaje. Si
+  // el item se sirve desde varios lotes, el backend lo reparte
+  // proporcionalmente (pedidos.service.ts:188).
+  descuento?: number;
   es_fiado: boolean;
   productos?: { nombre: string };
 }

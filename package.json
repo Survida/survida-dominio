@@ -5,14 +5,38 @@
   "license": "UNLICENSED",
   "types": "./index.d.ts",
   "exports": {
-    ".": { "types": "./index.d.ts" },
-    "./cliente": { "types": "./cliente.d.ts" },
-    "./producto": { "types": "./producto.d.ts" },
-    "./pedido": { "types": "./pedido.d.ts" },
-    "./entrega": { "types": "./entrega.d.ts" },
-    "./finanzas": { "types": "./finanzas.d.ts" },
-    "./personal": { "types": "./personal.d.ts" },
-    "./operaciones": { "types": "./operaciones.d.ts" },
-    "./reportes": { "types": "./reportes.d.ts" }
+    ".": {
+      "types": "./index.d.ts"
+    },
+    "./cliente": {
+      "types": "./cliente.d.ts"
+    },
+    "./producto": {
+      "types": "./producto.d.ts"
+    },
+    "./pedido": {
+      "types": "./pedido.d.ts"
+    },
+    "./entrega": {
+      "types": "./entrega.d.ts"
+    },
+    "./finanzas": {
+      "types": "./finanzas.d.ts"
+    },
+    "./personal": {
+      "types": "./personal.d.ts"
+    },
+    "./operaciones": {
+      "types": "./operaciones.d.ts"
+    },
+    "./reportes": {
+      "types": "./reportes.d.ts"
+    },
+    "./usuario": {
+      "types": "./usuario.d.ts"
+    },
+    "./mensajes": {
+      "types": "./mensajes.d.ts"
+    }
   }
 }

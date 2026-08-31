@@ -22,7 +22,12 @@ export interface Entrega {
   fecha_entrega?: string | null;
   ubicacion_lat?: number | null;
   ubicacion_lng?: number | null;
-  pedidos?: Pedido & { clientes?: { nombre: string; direccion?: string | null } };
+  // Que campos del cliente vienen depende del endpoint: el del panel pide
+  // clientes(nombre, direccion) y el del repartidor clientes(nombre,
+  // direccion, telefono) — por eso son todos opcionales.
+  pedidos?: Pedido & {
+    clientes?: { nombre: string; direccion?: string | null; telefono?: string | null };
+  };
   repartidores?: { nombre: string };
 }
 

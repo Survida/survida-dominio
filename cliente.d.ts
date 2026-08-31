@@ -1,5 +1,10 @@
 export type TipoCliente = 'cliente_final' | 'revendedor' | 'empresa';
 
+// Donde se entrega. Lo pide el modo dueno del bot y le sirve al
+// repartidor: no se entrega igual en una casa que en un comercio.
+// Queda null en los clientes cargados antes de que existiera el dato.
+export type TipoDomicilio = 'casa' | 'local';
+
 export interface Cliente {
   id: string;
   nombre: string;
@@ -7,6 +12,7 @@ export interface Cliente {
   dni?: string | null;
   cuit?: string | null;
   direccion?: string | null;
+  tipo_domicilio?: TipoDomicilio | null;
   telefono?: string | null;
   telefono_whatsapp?: string | null;
   email?: string | null;

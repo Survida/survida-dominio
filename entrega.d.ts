@@ -5,6 +5,9 @@ export interface Repartidor {
   nombre: string;
   telefono?: string | null;
   vehiculo?: string | null;
+  // El login del repartidor en Supabase Auth. Es lo que usa la app del
+  // repartidor para resolver "cual soy yo" (GET /repartidores/me).
+  usuario_id?: string | null;
   activo: boolean;
 }
 

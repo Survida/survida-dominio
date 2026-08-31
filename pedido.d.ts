@@ -24,6 +24,10 @@ export interface Pedido {
   estado: EstadoPedido;
   total: number;
   fecha: string;
+  // Indicaciones sueltas para la entrega: horario que prefiere, timbre
+  // que no anda, "dejar con el encargado". Las carga el bot al armar el
+  // pedido y las lee la app del repartidor.
+  notas?: string | null;
   clientes?: { nombre: string };
   pedido_items?: PedidoItem[];
 }

@@ -1,0 +1,18 @@
+{
+  "name": "@survida/dominio",
+  "version": "0.1.0",
+  "description": "Tipos del dominio de SURVIDA, compartidos por las 5 apps. Solo declaraciones: no se compila ni se empaqueta.",
+  "license": "UNLICENSED",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": { "types": "./index.d.ts" },
+    "./cliente": { "types": "./cliente.d.ts" },
+    "./producto": { "types": "./producto.d.ts" },
+    "./pedido": { "types": "./pedido.d.ts" },
+    "./entrega": { "types": "./entrega.d.ts" },
+    "./finanzas": { "types": "./finanzas.d.ts" },
+    "./personal": { "types": "./personal.d.ts" },
+    "./operaciones": { "types": "./operaciones.d.ts" },
+    "./reportes": { "types": "./reportes.d.ts" }
+  }
+}

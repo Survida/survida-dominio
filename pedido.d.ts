@@ -1,3 +1,5 @@
+export type FormaCobro = 'regalo' | 'pagado' | 'a_cobrar';
+
 export interface PedidoItem {
   id: string;
   producto_id: string;
@@ -26,6 +28,14 @@ export interface Pedido {
   cliente_id: string;
   canal: string;
   estado: EstadoPedido;
+  // Como se cobro. Va aparte del estado a proposito: el estado cuenta en
+  // que punto esta la entrega y esto cuenta la plata. Si fueran el mismo
+  // campo, un pedido entregado Y pagado no se podria representar.
+  //   regalo   = se entrego sin cargo (vale $0 pero el stock salio igual)
+  //   pagado   = ya se cobro
+  //   a_cobrar = se entrego y queda por cobrar
+  // Null en los pedidos anteriores a que existiera el dato.
+  forma_cobro?: FormaCobro | null;
   total: number;
   fecha: string;
   // Indicaciones sueltas para la entrega: horario que prefiere, timbre

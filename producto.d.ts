@@ -10,6 +10,18 @@ export interface Producto {
   // que la proyeccion diga "hace una tanda de 200" y no solo "quedan 3
   // dias".
   lote_produccion_sugerido?: number | null;
+
+  // ── Lo que se ve en la web publica ──────────────────────────────────
+  // Sacar algo de la venta online no es lo mismo que darlo de baja: un
+  // producto puede seguir vendiendose por la oficina a un revendedor y no
+  // ofrecerse en el sitio. Puede venir sin definir en un producto viejo,
+  // y en ese caso se toma como true.
+  mostrar_en_web?: boolean;
+  // El texto que lee el cliente en la web. Distinto del nombre, que es
+  // como se lo llama adentro del sistema.
+  descripcion_web?: string | null;
+  // En que orden aparecen en la web. Mas chico va primero.
+  orden_web?: number | null;
 }
 
 // Las tres cifras de stock de un producto, tal como las devuelve la vista
